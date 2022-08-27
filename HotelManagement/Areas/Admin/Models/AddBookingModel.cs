@@ -14,7 +14,6 @@ namespace HotelManagement.Areas.Admin.Models
     {
         [Required]
         public int UserId { get; set; }
-        public int BookingId { get; set; }
         public string BDate { get; set; }
         public string BRoom { get; set; }
         public string CheckIn { get; set; }
