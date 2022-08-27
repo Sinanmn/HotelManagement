@@ -16,7 +16,7 @@ namespace HotelManagement
     {
         public static void Main(string[] args)
         {
-            var configBuilder = new ConfigurationBuilder().AddJsonFile("appsettings.json", false)
+            var configBuilder = new ConfigurationBuilder().AddJsonFile("appsettings.json", )
                 .AddEnvironmentVariables()
                 .Build();
 
