@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace HotelManagement
 {
-    public class WebModule : 
+    public class WebModule : Module
     {
         protected override void Load(ContainerBuilder builder)
         {
