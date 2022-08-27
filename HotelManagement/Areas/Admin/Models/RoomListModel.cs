@@ -11,7 +11,7 @@ namespace HotelManagement.Areas.Admin.Models
 {
     public class RoomListModel
     {
-        int ab;
+        
         private IRoomService _roomService;
         private IHttpContextAccessor _httpContextAccessor;
         public RoomListModel()
