@@ -33,7 +33,7 @@ namespace HotelManagement
 
             WebHostEnvironment = env;
 
-            Configuration = builder.();
+            Configuration = builder.Build();
         }
 
         public IConfiguration Configuration { get; }
