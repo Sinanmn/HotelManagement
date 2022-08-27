@@ -1,0 +1,110 @@
+﻿@model EditBookingModel
+@{
+    ViewData["Title"] = "EditBooking";
+}
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1>Edit An Existing Booking Details</h1>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a class="nav-link"href="Index">Home</a></li>
+                    <li class="breadcrumb-item active">Add Booking</li>
+                </ol>
+            </div>
+        </div>
+    </div><!-- /.container-fluid -->
+</section>
+
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card card-info">
+                    <div class="card-header">
+                        <h3 class="card-title">Edit An Existing Booking Details</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <!-- form start -->
+                    <form class="form-horizontal" method="post" asp-controller="Hotel"
+                          asp-action="EditBooking" asp-antiforgery="true">
+                        <div asp-validation-summary="All" class="text-danger"></div>
+                        <input type="hidden" asp-for="Id" />
+                        <div class="card-body">
+                            <div class="form-group row">
+                                <label asp-for="UserId" class="col-sm-2 col-form-label">User Id</label>
+                                <div class="col-sm-10">
+                                    <input type="number" asp-for="UserId" class="form-control"
+                                           id="id" placeholder="User Id">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label asp-for="BDate" class="col-sm-2 col-form-label">Booking Date</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" asp-for="BDate"
+                                           id="bdate" placeholder="Booking Date">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label asp-for="BRoom" class="col-sm-2 col-form-label">Room Type</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" asp-for="BRoom"
+                                           id="broom" placeholder="Room Type">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label asp-for="CheckIn" class="col-sm-2 col-form-label">Check In</label>
+                                <div class="col-sm-10">
+                                    <input type="text" asp-for="CheckIn" class="form-control"
+                                           id="checkin" placeholder="CheckIn">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label asp-for="CheckOut" class="col-sm-2 col-form-label">Check Out</label>
+                                <div class="col-sm-10">
+                                    <input type="text" asp-for="CheckOut" class="form-control"
+                                           id="checkout" placeholder="Check Out">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label asp-for="Amount" class="col-sm-2 col-form-label">Amount</label>
+                                <div class="col-sm-10">
+                                    <input type="text" asp-for="Amount" class="form-control"
+                                           id="amount" placeholder="Partial/Full Payment">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label asp-for="TransactionId" class="col-sm-2 col-form-label">Transaction Id</label>
+                                <div class="col-sm-10">
+                                    <input type="text" asp-for="TransactionId" class="form-control"
+                                           id="transactionId" placeholder="Bkash Transaction">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label asp-for="Status" class="col-sm-2 col-form-label">Status</label>
+                                <div class="col-sm-10">
+                                    <input type="text" asp-for="Status" class="form-control"
+                                           id="Status" placeholder="Confirmed/Pending">
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- /.card-body -->
+                        <div class="card-footer">
+                            <button type="submit" class="btn btn-info">Edit</button>
+                            <a asp-action="ManageBooking" asp-controller="Hotel"
+                               class="btn btn-default float-right">Back</a>
+                        </div>
+                        <!-- /.card-footer -->
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+

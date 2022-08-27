@@ -1,0 +1,92 @@
+﻿@model AddUserModel
+@{
+    ViewData["Title"] = "AddUser";
+    Layout = "~/Areas/Admin/Views/Shared/_layout2.cshtml";
+}
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1>Add A New User</h1>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a class="nav-link"href="Index">Home</a></li>
+                    <li class="breadcrumb-item active">Add User</li>
+                </ol>
+            </div>
+        </div>
+    </div><!-- /.container-fluid -->
+</section>
+
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2 ">
+
+            </div>
+            <div class="col-md-8">
+                <div class="card card-info">
+                    <div class="card-header">
+                        <h3 class="card-title">Add A New User</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <!-- form start -->
+                    <form class="form-horizontal" method="post" asp-controller="Hotel"
+                          asp-action="AddUser" asp-antiforgery="true">
+                        <div asp-validation-summary="All" class="text-danger"></div>
+                        <div class="card-body">
+                            <div class="form-group row">
+                                <label asp-for="UName" class="col-sm-2 col-form-label">UserName</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" asp-for="UName"
+                                           id="user" placeholder="User Name">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label asp-for="UPhone" class="col-sm-2 col-form-label">UserPhone</label>
+                                <div class="col-sm-10">
+                                    <input type="text" asp-for="UPhone" class="form-control"
+                                           id="UserPhone" placeholder="Phone">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label asp-for="UEmail" class="col-sm-2 col-form-label">Email</label>
+                                <div class="col-sm-10">
+                                    <input type="text" asp-for="UEmail" class="form-control"
+                                           id="uemail" placeholder="Email">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label asp-for="UPass" class="col-sm-2 col-form-label">Password</label>
+                                <div class="col-sm-10">
+                                    <input type="text" asp-for="UPass" class="form-control"
+                                           id="password" placeholder="Password">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label asp-for="UAddress" class="col-sm-2 col-form-label">Address</label>
+                                <div class="col-sm-10">
+                                    <input type="text" asp-for="UAddress" class="form-control"
+                                           id="uaddress" placeholder="Address">
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- /.card-body -->
+                        <div class="card-footer">
+                            <button type="submit" class="btn btn-info">Add</button>
+                            <a asp-action="Index" asp-controller="Hotel"
+                               class="btn btn-default float-right">Cancel</a>
+                        </div>
+                        <!-- /.card-footer -->
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+

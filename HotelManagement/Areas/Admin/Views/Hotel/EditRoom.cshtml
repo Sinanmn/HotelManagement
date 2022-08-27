@@ -1,0 +1,89 @@
+﻿@model EditRoomModel
+@{
+    ViewData["Title"] = "EditRoom";
+}
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1>Edit An Existing Room Details</h1>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a class="nav-link"href="Index">Home</a></li>
+                    <li class="breadcrumb-item active">Add Room</li>
+                </ol>
+            </div>
+        </div>
+    </div><!-- /.container-fluid -->
+</section>
+
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card card-info">
+                    <div class="card-header">
+                        <h3 class="card-title">Edit An Existing Room Details</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <!-- form start -->
+                    <form class="form-horizontal" method="post" asp-controller="Hotel"
+                          asp-action="EditRoom" asp-antiforgery="true">
+                        <div asp-validation-summary="All" class="text-danger"></div>
+                        <input type="hidden" asp-for="Id" />
+                        <div class="card-body">
+                            <div class="form-group row">
+                                <label asp-for="Id" class="col-sm-2 col-form-label">Room Id</label>
+                                <div class="col-sm-10">
+                                    <input type="number" asp-for="Id" class="form-control"
+                                           id="id" placeholder="Room Id">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label asp-for="RName" class="col-sm-2 col-form-label">Room Name</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" asp-for="RName"
+                                           id="title" placeholder="Room Name">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label asp-for="RLocation" class="col-sm-2 col-form-label">Location</label>
+                                <div class="col-sm-10">
+                                    <input type="text" asp-for="RLocation" class="form-control"
+                                           id="location" placeholder="Location">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label asp-for="RCost" class="col-sm-2 col-form-label">Cost</label>
+                                <div class="col-sm-10">
+                                    <input type="text" asp-for="RCost" class="form-control"
+                                           id="cost" placeholder="Cost">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label asp-for="Status" class="col-sm-2 col-form-label">Status</label>
+                                <div class="col-sm-10">
+                                    <input type="text" asp-for="Status" class="form-control"
+                                           id="status" placeholder="Status">
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- /.card-body -->
+                        <div class="card-footer">
+                            <button type="submit" class="btn btn-info">Edit</button>
+                            <a asp-action="ManageRoom" asp-controller="Hotel"
+                               class="btn btn-default float-right">Back</a>
+                        </div>
+                        <!-- /.card-footer -->
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
