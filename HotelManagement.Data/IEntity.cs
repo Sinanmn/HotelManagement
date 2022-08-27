@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HotelManagement.
+namespace HotelManagement.Data
 {
     public interface IEntity<T>
     {
