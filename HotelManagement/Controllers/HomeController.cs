@@ -9,9 +9,6 @@ using System.Threading.Tasks;
 
 namespace HotelManagement.Controllers
 {
-    public class{
-
-    }
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
