@@ -9,9 +9,10 @@ using System.Threading.Tasks;
 
 namespace HotelManagement.Areas.Admin.Models
 {
+    
     public class RoomListModel
     {
-        
+
         private IRoomService _roomService;
         private IHttpContextAccessor _httpContextAccessor;
         public RoomListModel()
