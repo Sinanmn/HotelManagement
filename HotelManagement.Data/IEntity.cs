@@ -8,6 +8,6 @@ namespace HotelManagement.Data
 {
     public interface IEntity<T>
     {
-        T Id { get; set; }
+        T  { get; set; }
     }
 }
